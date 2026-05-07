@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>323 a tu estilo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER MOBILE -->
+  <header class="header">
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+      ☰
+    </button>
+
+    <a href="#inicio" class="logo">
+      <span>323</span> a tu estilo
+    </a>
+
+    <button class="cart-btn" id="openCartBtn" aria-label="Abrir carrito">
+      🛒 <span id="cartCount">0</span>
+    </button>
+  </header>
+
+  <!-- MENÚ LATERAL -->
+  <aside class="side-menu" id="sideMenu">
+    <div class="side-menu-top">
+      <h3>Menú</h3>
+      <button id="closeMenuBtn">✕</button>
+    </div>
+
+    <nav class="side-nav">
+      <a href="#inicio" class="menu-link">Inicio</a>
+      <a href="#camisas" class="menu-link">Camisas</a>
+      <a href="#busos" class="menu-link">Busos</a>
+      <a href="#categorias" class="menu-link">Categorías</a>
+      <a href="#nosotros" class="menu-link">Nosotros</a>
+      <a href="#contacto" class="menu-link">Contáctanos</a>
+    </nav>
+  </aside>
+
+  <!-- FONDO OSCURO -->
+  <div class="overlay" id="overlay"></div>
+
+  <!-- CARRITO -->
+  <aside class="cart-panel" id="cartPanel">
+    <div class="cart-top">
+      <h3>Tu carrito</h3>
+      <button id="closeCartBtn">✕</button>
+    </div>
+
+    <div class="cart-items" id="cartItems">
+      <p class="empty-cart">Tu carrito está vacío.</p>
+    </div>
+
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total productos:</span>
+        <strong id="cartTotalItems">0</strong>
+      </div>
+      <a href="https://wa.me/573000000000" target="_blank" class="whatsapp-btn">
+        Comprar por WhatsApp
+      </a>
+    </div>
+  </aside>
+
+  <main>
+
+    <!-- BANNER PRINCIPAL -->
+    <section class="hero" id="inicio">
+      <img src="imagenes/banner-323.jpg" alt="Banner principal 323 a tu estilo">
+      <div class="hero-content">
+        <p>Nueva colección</p>
+        <h1>Tu estilo,<br> a otro nivel</h1>
+        <span>Ropa urbana, minimalista y premium para hombre y mujer.</span>
+      </div>
+    </section>
+
+    <!-- BUSCADOR -->
+    <section class="search-section">
+      <div class="search-box">
+        <span>🔍</span>
+        <input type="text" id="searchInput" placeholder="Buscar productos...">
+      </div>
+    </section>
+
+    <!-- CATEGORÍAS RÁPIDAS -->
+    <section class="quick-categories" id="categorias">
+      <a href="#camisas" class="quick-card">
+        <img src="imagenes/portada-oversize-hombre.jpg" alt="Portada camisas oversize hombre">
+        <div class="quick-card-text">
+          <h3>Camisas</h3>
+          <p>Oversize y classic</p>
+        </div>
+      </a>
+
+      <a href="#busos" class="quick-card">
+        <img src="imagenes/portada-buso-hombre.jpg" alt="Portada busos hombre">
+        <div class="quick-card-text">
+          <h3>Busos</h3>
+          <p>Estilo premium</p>
+        </div>
+      </a>
+    </section>
+
+    <!-- CAMISAS -->
+    <section class="products-section" id="camisas">
+      <div class="section-title">
+        <p>Categoría</p>
+        <h2>Camisas</h2>
+      </div>
+
+      <div class="products-grid">
+
+        <article class="product-card" data-name="camisa oversize hombre">
+          <div class="product-image">
+            <img src="imagenes/camisa-oversize-hombre.jpg" alt="Camisa oversize hombre">
+          </div>
+          <div class="product-info">
+            <h3>Oversize Hombre</h3>
+            <p>Camisa oversize premium</p>
+            <button class="add-to-cart" data-product="Oversize Hombre">Agregar</button>
+          </div>
+        </article>
+
+        <article class="product-card" data-name="camisa clasic mujer">
+          <div class="product-image">
+            <img src="imagenes/camisa-clasic-mujer.jpg" alt="Camisa clasic mujer">
+          </div>
+          <div class="product-info">
+            <h3>Classic Mujer</h3>
+            <p>Camisa clásica femenina</p>
+            <button class="add-to-cart" data-product="Classic Mujer">Agregar</button>
+          </div>
+        </article>
+
+        <article class="product-card" data-name="oversize mujer">
+          <div class="product-image">
+            <img src="imagenes/oversize-mujer.jpg" alt="Oversize mujer">
+          </div>
+          <div class="product-info">
+            <h3>Oversize Mujer</h3>
+            <p>Oversize urbana premium</p>
+            <button class="add-to-cart" data-product="Oversize Mujer">Agregar</button>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- BUSOS -->
+    <section class="products-section" id="busos">
+      <div class="section-title">
+        <p>Categoría</p>
+        <h2>Busos</h2>
+      </div>
+
+      <div class="products-grid">
+
+        <article class="product-card" data-name="buso mujer">
+          <div class="product-image">
+            <img src="imagenes/buso-mujer.jpg" alt="Buso mujer">
+          </div>
+          <div class="product-info">
+            <h3>Buso Mujer</h3>
+            <p>Diseño urbano femenino</p>
+            <button class="add-to-cart" data-product="Buso Mujer">Agregar</button>
+          </div>
+        </article>
+
+        <article class="product-card" data-name="buso hombre">
+          <div class="product-image">
+            <img src="imagenes/buso-hombre.jpg" alt="Buso hombre">
+          </div>
+          <div class="product-info">
+            <h3>Buso Hombre</h3>
+            <p>Buso premium masculino</p>
+            <button class="add-to-cart" data-product="Buso Hombre">Agregar</button>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- NOSOTROS -->
+    <section class="about-section" id="nosotros">
+      <p>323 a tu estilo</p>
+      <h2>No es solo ropa, es identidad.</h2>
+      <span>
+        Diseñamos prendas con una estética urbana, minimalista y premium para
+        quienes quieren vestir diferente, con presencia y personalidad.
+      </span>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="contact-section" id="contacto">
+      <p>Compra directa</p>
+      <h2>Haz tu pedido</h2>
+      <span>Escríbenos por WhatsApp y compra fácil.</span>
+      <a href="https://wa.me/573000000000" target="_blank">Ir a WhatsApp</a>
+    </section>
+
+  </main>
+
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const sideMenu = document.getElementById("sideMenu");
+    const closeMenuBtn = document.getElementById("closeMenuBtn");
+    const overlay = document.getElementById("overlay");
+
+    const openCartBtn = document.getElementById("openCartBtn");
+    const cartPanel = document.getElementById("cartPanel");
+    const closeCartBtn = document.getElementById("closeCartBtn");
+
+    const searchInput = document.getElementById("searchInput");
+    const productCards = document.querySelectorAll(".product-card");
+
+    const addToCartButtons = document.querySelectorAll(".add-to-cart");
+    const cartItems = document.getElementById("cartItems");
+    const cartCount = document.getElementById("cartCount");
+    const cartTotalItems = document.getElementById("cartTotalItems");
+
+    let cart = JSON.parse(localStorage.getItem("cart323")) || [];
+
+    function saveCart() {
+      localStorage.setItem("cart323", JSON.stringify(cart));
+    }
+
+    function renderCart() {
+      cartItems.innerHTML = "";
+
+      if (cart.length === 0) {
+        cartItems.innerHTML = '<p class="empty-cart">Tu carrito está vacío.</p>';
+      } else {
+        cart.forEach((item, index) => {
+          const div = document.createElement("div");
+          div.classList.add("cart-item");
+
+          div.innerHTML = `
+            <div>
+              <h4>${item.name}</h4>
+              <p>Cantidad: ${item.quantity}</p>
+            </div>
+            <button onclick="removeFromCart(${index})">Eliminar</button>
+          `;
+
+          cartItems.appendChild(div);
+        });
+      }
+
+      const total = cart.reduce((acc, item) => acc + item.quantity, 0);
+      cartCount.textContent = total;
+      cartTotalItems.textContent = total;
+    }
+
+    function addToCart(productName) {
+      const existing = cart.find(item => item.name === productName);
+
+      if (existing) {
+        existing.quantity += 1;
+      } else {
+        cart.push({
+          name: productName,
+          quantity: 1
+        });
+      }
+
+      saveCart();
+      renderCart();
+    }
+
+    function removeFromCart(index) {
+      cart.splice(index, 1);
+      saveCart();
+      renderCart();
+    }
+
+    window.removeFromCart = removeFromCart;
+
+    addToCartButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        const productName = button.getAttribute("data-product");
+        addToCart(productName);
+        cartPanel.classList.add("active");
+        overlay.classList.add("active");
+      });
+    });
+
+    menuToggle.addEventListener("click", () => {
+      sideMenu.classList.add("active");
+      overlay.classList.add("active");
+    });
+
+    closeMenuBtn.addEventListener("click", closeAllPanels);
+    openCartBtn.addEventListener("click", () => {
+      cartPanel.classList.add("active");
+      overlay.classList.add("active");
+    });
+    closeCartBtn.addEventListener("click", closeAllPanels);
+    overlay.addEventListener("click", closeAllPanels);
+
+    function closeAllPanels() {
+      sideMenu.classList.remove("active");
+      cartPanel.classList.remove("active");
+      overlay.classList.remove("active");
+    }
+
+    document.querySelectorAll(".menu-link").forEach(link => {
+      link.addEventListener("click", () => {
+        closeAllPanels();
+      });
+    });
+
+    searchInput.addEventListener("input", () => {
+      const searchValue = searchInput.value.toLowerCase().trim();
+
+      productCards.forEach(card => {
+        const name = card.getAttribute("data-name").toLowerCase();
+
+        if (name.includes(searchValue)) {
+          card.style.display = "block";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    });
+
+    renderCart();
+  </script>
+
+</body>
+</html>
